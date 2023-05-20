@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>My Bookdown Template</title>
+  <meta name="description" content="<p>This is a minimal template of using the bookdown package to write a book.
+The HTML output format for this template is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="My Bookdown Template" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal template of using the bookdown package to write a book.
+The HTML output format for this template is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="n/a" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="My Bookdown Template" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal template of using the bookdown package to write a book.
+The HTML output format for this template is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Joey Yu Hsu" />
+
+
+<meta name="date" content="2023-05-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="first-chapter.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My Bookdown Template</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>workflow to start bookdown</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#create-bookdown-project"><i class="fa fa-check"></i><b>0.1</b> create bookdown project</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#necessary-files-in-a-bookdown-project-structure"><i class="fa fa-check"></i><b>0.2</b> necessary files in a bookdown project structure</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#book-rendering"><i class="fa fa-check"></i><b>0.3</b> book rendering</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#version-control"><i class="fa fa-check"></i><b>0.4</b> version control</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#publishing"><i class="fa fa-check"></i><b>0.5</b> publishing</a></li>
+<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#r-markdown"><i class="fa fa-check"></i><b>0.6</b> R markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="first-chapter.html"><a href="first-chapter.html"><i class="fa fa-check"></i><b>1</b> first chapter</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My Bookdown Template</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">My Bookdown Template</h1>
+<p class="author"><em>Joey Yu Hsu</em></p>
+<p class="date"><em>2023-05-20</em></p>
+</div>
+<div id="workflow-to-start-bookdown" class="section level1 unnumbered hasAnchor">
+<h1>workflow to start bookdown<a href="index.html#workflow-to-start-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure">
+<img src="img/bookdown~start.svg" alt="" />
+<p class="caption">bookdown~start.svg</p>
+</div>
+<div id="create-bookdown-project" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> create bookdown project<a href="index.html#create-bookdown-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To create a bookdown project in RStudio, you can follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>Open RStudio.</li>
+<li>Go to “File” in the top menu.</li>
+<li>Select “New Project…” from the drop-down menu. This will open the “New Project” dialog.</li>
+<li>In the “New Project” dialog, select “New Directory”.</li>
+<li>Choose “Book project using bookdown” from the list of project templates.</li>
+<li>Specify the directory where you want to create the bookdown project by entering the project name or clicking on the “Browse” button to select a directory.</li>
+<li>Click on “Create Project” to create the bookdown project.</li>
+</ol>
+<p>RStudio will create the project with the necessary files and folders for a bookdown project structure.</p>
+<p>You can start adding your book content in the <code>.Rmd</code> files within the project. The main book file is typically named <code>index.Rmd</code>, and you can include additional chapters or sections as separate <code>.Rmd</code> files.</p>
+<p>To compile and render your book, you can use the <code>bookdown::render_book()</code> function or the “Build Book” button in the RStudio toolbar. The rendered output files, such as HTML or PDF, will be saved in the <code>_book</code> directory by default.</p>
+<p>Remember to install the <code>bookdown</code> package if you haven’t already by running <code>install.packages("bookdown")</code> in the R console.</p>
+</div>
+<div id="necessary-files-in-a-bookdown-project-structure" class="section level2 hasAnchor" number="0.2">
+<h2><span class="header-section-number">0.2</span> necessary files in a bookdown project structure<a href="index.html#necessary-files-in-a-bookdown-project-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>&lt;bookdown_project_root&gt;/
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd
+├── preamble.tex
+├── book.bib
+├── packages.bib
+├── ...</code></pre>
+<p>In a typical bookdown project structure, the necessary files and folders include:</p>
+<ol style="list-style-type: decimal">
+<li><p><code>_bookdown.yml</code>: This file contains the configuration options for your bookdown project. It allows you to specify various settings such as the output format, file naming conventions, and other project-specific options.</p></li>
+<li><p><code>_output.yml</code>: This file specifies the output format settings for your book, such as HTML, PDF, or EPUB. It allows you to customize the appearance and behavior of the rendered output.</p></li>
+<li><p><code>index.Rmd</code>: This is the main book file that contains the content and structure of your book. It typically serves as the entry point for your book and can include chapter headings, sections, and content in Markdown or R Markdown format.</p></li>
+<li><p><code>preamble.tex</code>: This file contains LaTeX code that is included at the beginning of the LaTeX/PDF output. It can be used to define custom LaTeX commands or include additional LaTeX packages.</p></li>
+<li><p><code>book.bib</code>: This file is an optional BibTeX bibliography file that can be used to manage references for your book. It stores the bibliographic information for the references cited in your book.</p></li>
+<li><p><code>packages.bib</code>: This file is also an optional BibTeX file that specifies the LaTeX packages to be used in the LaTeX/PDF output. It allows you to include additional LaTeX packages that are not automatically loaded by bookdown.</p></li>
+</ol>
+<p>These files and folders provide the necessary structure and configuration for your bookdown project. You can customize and modify them based on your specific requirements and preferences.</p>
+<p>In addition to the previously mentioned files, here are some additional files commonly found in a bookdown project:</p>
+<pre><code>&lt;bookdown_project_root&gt;/
+├── ...
+├── &lt;bookdown_project_name&gt;.Rproj
+├── README.md
+├── style.css
+├── .gitignore
+├── ...</code></pre>
+<ul>
+<li><p><code>&lt;bookdown_project_name&gt;.Rproj</code>: This file is the RStudio project file for your bookdown project. It allows you to open the project in RStudio with all the associated files and settings.</p></li>
+<li><p><code>README.md</code>: This file is a markdown file that typically serves as the project’s README. It can include an introduction, project description, installation instructions, or any other relevant information about the bookdown project.</p></li>
+<li><p><code>style.css</code>: This file contains custom CSS styles that can be applied to the rendered output of your book. You can use this file to customize the appearance and layout of the HTML output, such as changing fonts, colors, or adding custom styles.</p></li>
+<li><p><code>.gitignore</code>: This file specifies which files and directories should be ignored by Git version control. It allows you to exclude certain files or folders from being tracked in your version control system, such as temporary files, output files, or sensitive data.</p></li>
+</ul>
+<p>These additional files enhance the functionality and organization of your bookdown project. They provide project-specific information, custom styling options, and version control management.</p>
+<p>After rendering your book using bookdown (<code>bookdown::render_book()</code> in Console tab in the left lower pane of RStudio), the resulting output files are typically stored in the <code>_book</code> directory showing in the Files tab in the right lower pane of RStudio. Here’s an updated directory structure:</p>
+<pre><code>&lt;bookdown_project_root&gt;/
+├── _book/
+│   ├── ...
+│   ├── index.html
+│   ├── &lt;chapter1&gt;.html
+│   ├── &lt;chapter2&gt;.html
+│   ├── style.css
+│   └── ...
+├── ...</code></pre>
+<p>In the <code>_book</code> directory, you will find various files related to the rendered book, such as <code>index.html</code>, <code>chapter1.html</code>, <code>chapter2.html</code>, and so on. These HTML files correspond to the different chapters or sections in your book. The <code>style.css</code> file is also present in the <code>_book</code> directory, containing any custom CSS styles you may have specified.</p>
+<p>The <code>_book</code> directory holds the complete rendered version of your book, ready for distribution or publishing. You can open the <code>index.html</code> file in a web browser to view the book’s main page and navigate through the chapters using the generated HTML files.</p>
+<p>Please note that the specific file names and structure may vary depending on your book’s content and configuration.</p>
+</div>
+<div id="book-rendering" class="section level2 hasAnchor" number="0.3">
+<h2><span class="header-section-number">0.3</span> book rendering<a href="index.html#book-rendering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you don’t set the <code>output_dir</code> in the <code>_bookdown.yml</code> file, the <code>bookdown::render_book()</code> function will use the default output directory, which is <code>_book</code>. This means that the rendered book will be generated in the <code>_book</code> directory located in the root directory of your bookdown project.</p>
+<p>To render your book without specifying the output directory explicitly, you can simply call <code>bookdown::render_book()</code> without any additional arguments:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
+<p>By default, this will render your book and save the output files, such as HTML, PDF, or other formats, in the <code>_book</code> directory.</p>
+<p>It’s important to ensure that the <code>_book</code> directory is not being used for any other purpose, as bookdown will generate and overwrite files in that directory during the rendering process.</p>
+<p>If you don’t set the <code>output_dir</code> in the <code>_bookdown.yml</code> file, the default output directory for your bookdown project will be the <code>_book</code> directory. The <code>_book</code> directory is created automatically by bookdown and contains the compiled output of your book, including HTML, PDF, or other formats you have specified.</p>
+<p>By default, bookdown will create the <code>_book</code> directory in the root directory of your bookdown project. However, if you have a custom directory structure or want to specify a different output directory, you can set the <code>output_dir</code> option in the <code>_bookdown.yml</code> file to specify the desired output directory.</p>
+<p>For example, if you want the output to be generated in a directory named <code>my_output</code>, you can add the following line to the <code>_bookdown.yml</code> file:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="index.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output_dir</span><span class="kw">:</span><span class="at"> my_output</span></span></code></pre></div>
+<p>This will create the <code>my_output</code> directory in the root directory of your bookdown project and generate the output files inside it.</p>
+<p>Remember to make sure that the specified output directory is not already used for any other purpose, as bookdown will generate and overwrite files in that directory during the build process.</p>
+<p>If you have not set the <code>output_dir</code> in the <code>_bookdown.yml</code> file and your bookdown project does not have any first-level headings, you can use the following code to open the main HTML file in a web browser:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">browseURL</span>(<span class="st">&#39;_book/_main.html&#39;</span>)</span></code></pre></div>
+<p>The <code>_main.html</code> file is the main HTML file generated by bookdown when there are no first-level headings, i.e. <code># chapter ...</code>, in your project.</p>
+<p>However, if your bookdown project does have at least one first-level heading, you can use the following code to open the main HTML file in a web browser:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="index.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">browseURL</span>(<span class="st">&#39;_book/index.html&#39;</span>)</span></code></pre></div>
+<p>In this case, the main HTML file generated by bookdown is typically named <code>index.html</code> and is located in the <code>_book</code> directory.</p>
+<p>Please note that the code assumes you are running it in an R environment that has the <code>browseURL()</code> function available, and the <code>_book</code> directory has been successfully generated by bookdown before attempting to open the HTML file.</p>
+</div>
+<div id="version-control" class="section level2 hasAnchor" number="0.4">
+<h2><span class="header-section-number">0.4</span> version control<a href="index.html#version-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>To add an existing R project to GitHub, you can follow these steps:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Create a new repository on GitHub without initializing it with a README, .gitignore, or license.</li>
+<li>Copy the repository URL provided by GitHub.</li>
+</ol>
+<p>In RStudio:</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Open your R project.</li>
+<li>Go to “Tools” in the top menu and select “Project Options”.</li>
+<li>In the “Project Options” dialog, click on “Git/SVN” in the left sidebar.</li>
+<li>In the “Version control system” dropdown, select “Git”.</li>
+<li>Click on “OK” to close the dialog. This may restart your RStudio.</li>
+<li>Open the Git tab in the upper right pane.</li>
+<li>In the Git tab, click on “More” and select “Terminal”.</li>
+<li>In the Terminal pane, run the following commands, replacing <code>&lt;repository_url&gt;</code> with the repository URL copied from GitHub:</li>
+</ol>
+<pre><code>git remote add origin &lt;repository_url&gt;
+git branch -M main
+git push -u origin main</code></pre>
+<p>This will add the remote repository as the origin, switch to the main branch (if not already on it), and push your project to GitHub.</p>
+<ul>
+<li>To create a new R project using version control, you can follow these steps:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Open RStudio.</li>
+<li>Go to “File” in the top menu and select “New Project…”.</li>
+<li>In the “Create Project” dialog, select “Version Control” and choose the version control system you want to use (e.g., Git).</li>
+<li>Specify the repository URL or directory for the project.</li>
+<li>Click on “Create Project” to create the R project with version control integrated.</li>
+</ol>
+<p>RStudio will initialize the project with the chosen version control system and set up the necessary files and folders for version control management.</p>
+<p>Please note that these instructions assume you have Git installed and properly configured on your system. Additionally, make sure you have the necessary permissions to create repositories on GitHub or access the desired repository.</p>
+</div>
+<div id="publishing" class="section level2 hasAnchor" number="0.5">
+<h2><span class="header-section-number">0.5</span> publishing<a href="index.html#publishing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="r-markdown" class="section level2 hasAnchor" number="0.6">
+<h2><span class="header-section-number">0.6</span> R markdown<a href="index.html#r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="first-chapter.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

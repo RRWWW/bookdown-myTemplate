@@ -1,0 +1,7 @@
+create-bookdown-project
+necessary-files-in-a-bookdown-project-structure
+book-rendering
+version-control
+publishing
+r-markdown
+first-chapter
